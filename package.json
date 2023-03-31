@@ -14,15 +14,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.1.0",
+    "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1"
   }
