@@ -1,0 +1,8 @@
+// Button
+@mixin btn-text($color, $font-size, $line-height, $font-weight: 400, $font-style: normal) {
+    color: $color;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}

@@ -6,31 +6,600 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-     <title>Test</title>
-<script defer src="index.js"></script></head>
+    <title>Test</title>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
 
-<body>
-    <header>
-
-    </header>
-    <main>
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <div class="p-2">Блок 2</div>
-                <div class="p-2">Блок 3</div>
-                <div class="p-2">Блок 4</div>
-                <div class="p-2">Блок 5</div>
-                <div class="p-2">Блок 1</div>
-                <div class="p-2">Блок 6</div>
-                <div class="p-2">Блок 7</div>
+<body class="mx-auto">
+    <div class="container position-relative overflow-hidden">
+        <div class="bg-glow-h"></div>
+        <header>
+            <div class="d-flex h-95 align-items-center me-1">
+                <div class="flex-fill ms-20">
+                    <img src="./img/logo.png" class="img-fluid" alt="...">
+                </div>
+                <div class="flex-fill">
+                    <div class="search-input">
+                        <img src="./img/svg/search.svg" class="img-fluid w-19 ms-2" alt="...">
+                        <input class="border-none ms-1" type="search" value="" placeholder="Поиск...">
+                    </div>
+                    <div class="d-flex flex-column search-full">
+                        <div class="search-line">
+                            <img src="./img/svg/search.svg" class="img-fluid" alt="...">
+                            <input class="border-none ms-1" type="search" value="Анастасия" placeholder="Поиск...">
+                        </div>
+                        <div>
+                            <div class="search-line search-info active">
+                                <img src="./img/thumbnail/piple_1.png" class="img-fluid" alt="...">
+                                <span>Анастасия Ивлеева</span>
+                            </div>
+                            <div class="search-line search-info">
+                                <img src="./img/thumbnail/piple_2.png" class="img-fluid" alt="...">
+                                <span>Анастасия Задорожная</span>
+                            </div>
+                            <div class="search-line search-info">
+                                <img src="./img/thumbnail/piple_3.png" class="img-fluid" alt="...">
+                                <span>Анастасия Макеева</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-fill">
+                    <button type="button" class="btn btn-login">Вход</button>
+                </div>
+                <div class="flex-fill ">
+                    <button type="button" class="btn btn-reg me-1">Регистрация</button>
+                </div>
             </div>
-        </div>
-    </main>
+            <div class="d-flex h-102 mx-3 justify-content-between align-items-center">
+                <div class="d-flex w-155 select-box">
+                    <span>Фильтры</span>
+                    <img src="./img/svg/caret_b.svg" class="img-fluid w-13" alt="...">
+                </div>
+                <div class="">
+                    <div class="search-input w-326">
+                        <img src="./img/svg/search.svg" class="img-fluid w-19 ms-2" alt="...">
+                        <input class="border-none ms-1" type="search" value="" placeholder="Поиск...">
+                    </div>
+                </div>
+                <div class="d-flex w-207 select-box me-1">
+                    <span>По умолчанию</span>
+                    <img src="./img/svg/chevron_b.svg" class="img-fluid w-13" alt="...">
+                </div>
+            </div>
+        </header>
 
-    <footer>
+        <main>
+            <div class="d-flex mx-1 justify-content-between flex-wrap">
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+                <!-- card -->
+                <article>
+                    <div class="col-md-4 card-item p-7">
+                        <img src="./img/card.png" class="img-fluid" alt="...">
+                        <p class="">Без слов</p>
+                        <div class="card-item-info">
+                            <img src="./img/thumbnail/star_48.png" class="img-fluid" alt="...">
+                            <p>Настя Ивлеева Вячеславовна</p>
+                            <div class="">проверено
+                                <img src="./img/svg/check_mark.svg" class="img-fluid w-14" alt="...">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-23">
+                            <span>Редкость:</span>
+                            <div class="btn-rarity">уникальная</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-11">
+                            <span>Цена:</span>
+                            <div class="btn-price">от 500 ₽</div>
+                        </div>
+                        <div class="mt-11 ml-8">
+                            <button type="button" class="btn btn-buy">Купить</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end card -->
+            </div>
+            <!-- pagination  -->
+            <nav class="pagination">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/svg/pag_l.svg" alt="<<">
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li class=""><a href="#">2</a></li>
+                    <li class=""><a href="#">3</a></li>
+                    <li class=""><a href="#">4</a></li>
+                    <li class=""><a href="#">5</a></li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/svg/pag_r.svg" alt=">>">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end pagination  -->
+        </main>
 
-    </footer>
-
+        <footer>
+            <div class="bg-glow-f"></div>
+            <div class="footer">
+                <div class="info-footer">
+                    <div class="w-202">
+                        <p>NFT</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Что такое NFT</a></li>
+                            <li><a href="#">Создайте NFT <br>с нами</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-238">
+                        <p>Компания</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Отправить запрос</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-266">
+                        <p>Другое</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Условия использования</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="./img/soc_twitter.png" class="img-fluid w-20" alt="..."></a>
+                    <a href="#"><img src="./img/soc_vk.png" class="img-fluid w-20" alt="..."></a>
+                </div>
+                <div class="footer_img">
+                    <hr>
+                    <img src="./img/star.png" alt="...">
+                </div>
+                    <p class="footer-text">@ tnft.ru Company, Inc</p>
+            </div>
+        </footer>
+    </div>
     <script src="./index.js"></script>
 
 </body>

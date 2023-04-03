@@ -1,62 +1,430 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Rubik:wght@400;500&display=swap");
+@import "./variables.scss";
+@import "./mixins.scss";
 
 //@import "~bootstrap/scss/bootstrap";
 
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
-// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-
-// Customize some defaults
-$body-color: #333;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
-
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/utilities/api";
 
-@import "~bootstrap/scss/containers";
-
-
-// 5. Add additional custom code here
-
-//
-// Custom styles
-//
-
-body {
-  padding: 3rem 1.5rem;
-
+// Font
+.font-rubik {
+  font-family: "Rubik";
+  font-size: 14px;
 }
 
-// Style Bootstrap icons
-.bi {
-  fill: currentcolor;
+.font-istok {
+  font-family: "Istok Web";
+}
+
+body {
+  @extend .font-rubik;
+}
+
+.container {
+  max-width: 768px;
+}
+
+// background свечение header
+.bg-glow-h {
+  position: absolute;
+  width: 364.62px;
+  height: 335px;
+  left: -235px;
+  top: 129px;
+  background: rgba(253, 212, 70, 0.5);
+  filter: blur(90.2517px);
+  z-index: -1;
+}
+
+// background свечение footer
+.bg-glow-f {
+  position: absolute;
+  width: 768px;
+  height: 705.31px;
+  left: 0px;
+  bottom: 0px;
+  background: rgba(253, 212, 70, 0.5);
+  filter: blur(190.099px);
+  z-index: -1;
+}
+
+// Btn общии свойства кнопок
+.btn-common {
+  min-width: 140px;
+  border-width: 2px;
+  border-radius: $border-radius;
+}
+
+// кнопка Регистрация
+.btn-reg {
+  @include button-variant($color-yellow-500, $color-yellow-500);
+  @include btn-text($color-black, 18px, 24px, 500, normal);
+  @extend .btn-common;
+}
+
+// кнопка Входа
+.btn-login {
+  @include button-variant(#fff, $color-yellow-500);
+  @include btn-text($color-black, 18px, 24px, 400, normal);
+  @extend .btn-common;
+}
+
+// элемент card-item
+.btn-rarity {
+  @include btn-text($color-black, 11px, 20px, 400, normal);
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #ffc107, #ec851a) border-box;
+  border-radius: 7px;
+  width: 90px;
+  height: 21px;
+  text-align: center;
+}
+
+// элемент card-item
+.btn-price {
+  @include btn-text($color-black, 11px, 21px, 400, normal);
+  background: $color-yellow-500;
+  border-radius: 7px;
+  width: 76px;
+  height: 21px;
+  text-align: center;
+}
+
+// кнопка card-item
+.btn-buy {
+  @include btn-text($color-black, 17px, 25px, 400, normal);
+  border: 1px solid transparent;
+  background: linear-gradient(90deg, #fdd446 0%, #f79b47 100%);
+  border-radius: 15px;
+  width: 183px;
+  height: 37px;
+  text-align: center;
+}
+
+// Input Поиска
+.search-input {
+  display: flex;
+  min-width: 140px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: $border-radius;
+  font-style: normal;
+  height: 40px;
+  width: 264px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  justify-content: center;
+  padding-left: 10px;
+  input {
+    width: 100%;
+  }
+}
+
+.search-full {
+  position: absolute;
+  width: 568px;
+  height: 203px;
+  left: 170px;
+  top: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+.search-line {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 14px;
+  padding-top: 6px;
+  img {
+    width: 28px;
+    margin-right: 3px;
+  }
+  input {
+    width: 100%;
+  }
+}
+.search-info {
+  font-weight: 500;
+  padding-top: 0px;
+  img {
+    width: 24px;
+    margin-right: 12px;
+  }
+}
+.active {
+  background-color: #fef6d6;
+}
+
+// скрыть input focus выделение
+.border-none {
+  border: none;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+.select-box {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  @extend .px-2;
+  @include btn-text(black, 18px, 24px, 400, normal);
+}
+
+// card-item блок
+.card-item {
+  width: 216px;
+  height: 436px;
+  margin: 0 14px 30px;
+  box-sizing: border-box;
+  border: 0.7px solid rgba(48, 47, 46, 0.7);
+  > img {
+    width: 199px;
+    height: 222px;
+  }
+  > p {
+    @extend .font-istok;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 0;
+    margin-top: 16px;
+  }
+}
+
+.card-item-info {
+  position: relative;
+  > img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 5px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  div {
+    color: $color-yellow-500;
+    position: absolute;
+    top: 33px;
+    left: 54px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 17px;
+    img {
+      width: 14px;
+      margin-left: 3px;
+    }
+  }
+}
+
+.card-item-rarity {
+  span {
+    line-height: 25px;
+  }
+  div {
+    @extend .btn-rarity;
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  width: 100%;
+  height: 118px;
+  justify-content: center;
+  margin-top: 2px;
+  ul {
+    width: 300px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    .active {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $color-yellow-500;
+    }
+  }
+  li {
+    width: 20px;
+    @extend .font-istok;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    text-align: center;
+    svg {
+      width: 10px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+// Footer
+.footer {
+  height: 310px;
+  background-color: $color-yellow-500;
+  margin-right: -14px;
+  margin-left: -14px;
+}
+
+.info-footer {
+  display: flex;
+  padding-top: 25px;
+  padding-left: 62px;
+  p {
+    @extend .font-istok;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+  }
+  ul > li {
+    margin-bottom: 12px;
+  }
+  li {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.footer_img {
+  justify-content: center;
+  display: flex;
+  hr {
+    width: 92%;
+    bottom: 80px;
+    position: absolute;
+  }
+  img {
+    width: 66px;
+    height: 61px;
+    bottom: 59px;
+    position: absolute;
+  }
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 70px;
+  left: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.social-icons {
+  margin-left: 61px;
+  margin-top: 3px;
+  > a {
+    margin-right: 7px;
+  }
+}
+
+// Margin
+.ms-20 {
+  margin-left: 20px;
+}
+.mt-11 {
+  margin-top: 11px;
+}
+.mt-23 {
+  margin-top: 23px;
+}
+.mt-11 {
+  margin-top: 11px;
+}
+.mt-28 {
+  margin-top: 28px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.mx-18 {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+.p-7 {
+  padding: 7px;
+}
+
+// width
+.w-13 {
+  width: 13px;
+}
+.w-14 {
+  width: 14px;
+}
+.w-19 {
+  width: 19px;
+}
+.w-20 {
+  width: 20px;
+}
+.w-155 {
+  width: 155px;
+}
+.w-207 {
+  width: 207px;
+}
+.w-202 {
+  width: 202px;
+}
+.w-238 {
+  width: 238px;
+}
+.w-266 {
+  width: 266px;
+}
+.w-326 {
+  width: 326px;
+}
+
+// height
+.h-95 {
+  height: 95px;
+}
+.h-102 {
+  height: 102px;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tb {
+            border-collapse: collapse;
+            width: 300px;
+            color: white;
+        }
+
+        .tb th,
+        .tb td {
+            padding: 5px;
+            border: solid 1px #777;
+        }
+
+        .tb th {
+            background-color: lightblue;
+            color: black;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="tb" id="currency-table">
+        <tr>
+            <th>id</th>
+            <th>symbol</th>
+            <th>name</th>
+        </tr>
+    </table>
+
+
+    <script>
+        fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1')
+            .then(response => response.json())
+            .then(data => {
+                // Get table element from HTML document
+                const table = document.getElementById('currency-table');
+                const headers = ['id', 'symbol', 'name'];
+
+                // Create table rows for each currency
+                data.slice(0, 5).forEach(currency => {
+                    const row = document.createElement('tr');
+                    row.style.backgroundColor = 'blue';
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.innerText = currency[header];
+                        row.appendChild(td);
+                    });
+                    table.appendChild(row);
+                });
+
+                // Create table row for USDT currency
+                const usdtCurrency = data.find(currency => currency.symbol === 'usdt');
+                if (usdtCurrency) {
+                    const row = document.createElement('tr');
+                    row.className = 'green';
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.innerText = usdtCurrency[header];
+                        row.appendChild(td);
+                    });
+                    table.appendChild(row);
+                }
+            })
+            .catch(error => console.error(error));
+    </script>
+</body>
+
+</html>

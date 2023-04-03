@@ -1,7 +1,8 @@
+const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
-const miniCss = require('mini-css-extract-plugin');
+
 module.exports = {
    entry: './src/js/index.js',
    output: {
@@ -11,31 +12,38 @@ module.exports = {
    
    module: {
       rules: [{
-         test: /\.s[ac]ss$/i,
-         use: [
-           // Creates `style` nodes from JS strings
-           "style-loader",
-           // Translates CSS into CommonJS
-           "css-loader",
-           {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: () => [
+        test: /\.(scss)$/,
+        use: [
+          // вставить CSS на страницу
+          MiniCssExtractPlugin.loader
+        , {
+          // переводит CSS в модули CommonJS
+          loader: 'css-loader'
+        }, {
+          // Выполнить действия postcss
+          loader: 'postcss-loader',
+          options: {
+            // `postcssOptions` требуется для postcss 8.x;
+            // если Вы используете postcss 7.x пропустите ключ
+            postcssOptions: {
+              // плагины postcss, можно экспортировать в postcss.config.js
+              plugins: function () {
+                return [
                   require('autoprefixer')
-                ]
+                ];
               }
             }
-          },
-           // Compiles Sass to CSS
-           "sass-loader",
-         ],
-       }]
+          }
+        }, {
+          // компилирует Sass в CSS
+          loader: 'sass-loader'
+        }]
+      }]
    },
    plugins: [
-      new miniCss({
-         filename: 'style.css',
-      }),
+    new MiniCssExtractPlugin({
+      filename: "main.css",
+    }),
       new HTMLWebpackPlugin({
         template: "./src/index.html",
       }),
