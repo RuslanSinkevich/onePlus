@@ -6,3 +6,48 @@
     font-weight: $font-weight;
     font-style: $font-style;
 }
+
+// возвращает сокращённые имена классов, размеры высоты, ширины и различные отступы
+@mixin size-all($name, $sizes...) {
+    @each $size in $sizes {
+        .#{$name}-#{$size} {
+            @if ($name == "w") {
+                width: $size + #{"px"};
+            } @else if ($name == "h") {
+                height: $size + #{"px"};
+            } @else if ($name == "m") {
+                margin: $size + #{"px"};
+            } @else if ($name == "ms") {
+                margin-left: $size + #{"px"};
+            } @else if ($name == "mt") {
+                margin-top: $size + #{"px"};
+            } @else if ($name == "me") {
+                margin-right: $size + #{"px"};
+            } @else if ($name == "mb") {
+                margin-bottom: $size + #{"px"};
+            } @else if ($name == "mx") {
+                margin-left: $size + #{"px"};
+                margin-right: $size + #{"px"};
+            } @else if ($name == "my") {
+                margin-top: $size + #{"px"};
+                margin-bottom: $size + #{"px"};
+            } @else if ($name == "p") {
+                padding: $size + #{"px"};
+            } @else if ($name == "ps") {
+                padding-left: $size + #{"px"};
+            } @else if ($name == "pt") {
+                padding-top: $size + #{"px"};
+            } @else if ($name == "pe") {
+                padding-right: $size + #{"px"};
+            } @else if ($name == "pb") {
+                padding-bottom: $size + #{"px"};
+            } @else if ($name == "px") {
+                padding-left: $size + #{"px"};
+                padding-right: $size + #{"px"};
+            } @else if ($name == "py") {
+                padding-top: $size + #{"px"};
+                padding-bottom: $size + #{"px"};
+            }
+        }
+    }
+}

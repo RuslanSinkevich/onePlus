@@ -6320,6 +6320,17 @@ progress {
   z-index: -1;
 }
 
+.bg-glow-r {
+  position: absolute;
+  width: 554px;
+  height: 509px;
+  left: 589px;
+  top: 34%;
+  background: rgba(253, 212, 70, 0.5);
+  filter: blur(137.129px);
+  z-index: -1;
+}
+
 .btn-common, .btn-login, .btn-reg {
   min-width: 140px;
   border-width: 2px;
@@ -6643,10 +6654,6 @@ progress {
   margin-right: 7px;
 }
 
-.ms-20 {
-  margin-left: 20px;
-}
-
 .mt-11 {
   margin-top: 11px;
 }
@@ -6655,21 +6662,21 @@ progress {
   margin-top: 23px;
 }
 
-.mt-11 {
-  margin-top: 11px;
-}
-
 .mt-28 {
   margin-top: 28px;
 }
 
-.ml-8 {
+.ms-8 {
   margin-left: 8px;
 }
 
+.ms-20 {
+  margin-left: 20px;
+}
+
 .mx-18 {
-  margin-right: 18px;
   margin-left: 18px;
+  margin-right: 18px;
 }
 
 .p-7 {
@@ -6696,12 +6703,12 @@ progress {
   width: 155px;
 }
 
-.w-207 {
-  width: 207px;
-}
-
 .w-202 {
   width: 202px;
+}
+
+.w-207 {
+  width: 207px;
 }
 
 .w-238 {
